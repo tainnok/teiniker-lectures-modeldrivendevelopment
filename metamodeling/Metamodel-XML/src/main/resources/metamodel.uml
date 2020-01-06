@@ -1,0 +1,19 @@
+@startuml
+
+	class Document{
+	}
+	
+	class Node {
+	 	name : String
+	}
+	
+	class Attribute {
+		name : String
+		value : String
+	} 
+	
+	Document "1" *-- "1" Node : rootNode
+	Node "1" o-- "*" Node  : childNodes
+	Node "1" *-- "*" Attribute : attributes
+
+@enduml
