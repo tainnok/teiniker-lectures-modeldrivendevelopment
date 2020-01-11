@@ -19,14 +19,14 @@ public class EntityVisitorImpl
         Field[] fields = clazz.getDeclaredFields();
         for(Field field : fields)
         {
-            sb.append(visitProberty(field)).append(" ");            
+            sb.append(visitProperty(field)).append(" ");            
         }
         sb.append("}");
         
         return sb.toString();
     }
         
-    public String visitProberty(Field field)
+    public String visitProperty(Field field)
     {
         String name = field.getName();
         String type = visitType(field);

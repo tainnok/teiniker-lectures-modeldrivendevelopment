@@ -7,7 +7,7 @@ public interface EntityVisitor
 
 	public abstract String visitEntity(Class<?> clazz);
 
-	public abstract String visitProberty(Field field);
+	public abstract String visitProperty(Field field);
 
 	public abstract String visitType(Field field);
 
