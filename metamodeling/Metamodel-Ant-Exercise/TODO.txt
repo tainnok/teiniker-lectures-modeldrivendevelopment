@@ -13,7 +13,7 @@ Beispiel: (siehe MetamodelTest)
 		<property name="src" value="./src" />
 		<property name="build" value="./build" />
 		<property name="dist" value="./dist" />
-	
+	    <!-- the following is if you need additional practise, there are no tests for this:
 		<target name="clean">
 			<delete dir="build" />
 		</target>
@@ -22,7 +22,7 @@ Beispiel: (siehe MetamodelTest)
 			<mkdir dir="build/classes" />
 			<javac srcdir="src" destdir="build/classes" />
 		</target>
-	
+	    -->
 	</project>
 
 Implementieren Sie das Metamodel. Achten Sie auf eine effiziente
