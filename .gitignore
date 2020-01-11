@@ -5,3 +5,5 @@
 target/
 .settings/
 jdbc.properties
+src/generated/
+src/gen/
