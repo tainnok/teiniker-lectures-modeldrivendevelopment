@@ -19,7 +19,7 @@ How to run the MySQL server?
 
 To start the MySQL server in the VM type (as root):
 
-# systemctl start mysqld.service
+# systemctl start mariadb
 
 Note that all tables and data is installed during the test's setup
 phase.
