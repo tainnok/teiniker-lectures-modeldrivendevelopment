@@ -1,8 +1,7 @@
 
 How to generate XML schema from annotated Java classes?
 -------------------------------------------------------------------------------
-
-$ schemagen src/main/java/org/se/lab/*.java
+$ mvn generate-resources; cat target/schemas/schema1.xsd
 
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

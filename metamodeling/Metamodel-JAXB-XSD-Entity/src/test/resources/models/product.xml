@@ -10,7 +10,7 @@
         <property id="false" name="description">
             <type name="String"/>
         </property>
-        <property id="false" name="price" x="xxx">
+        <property id="false" name="price">
             <type name="long"/>
         </property>
     </properties>
