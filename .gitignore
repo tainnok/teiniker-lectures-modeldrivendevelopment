@@ -4,3 +4,4 @@
 *.prefs
 target/
 .settings/
+jdbc.properties
