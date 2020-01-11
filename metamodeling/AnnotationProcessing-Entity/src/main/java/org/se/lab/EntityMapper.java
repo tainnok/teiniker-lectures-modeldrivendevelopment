@@ -21,14 +21,14 @@ public class EntityMapper
         Field[] fields = clazz.getDeclaredFields();
         for(Field field : fields)
         {
-            MProperty property = toProberty(field);
+            MProperty property = toProperty(field);
             entity.getProperties().add(property);
         }
         return entity;
     }
     
     
-    protected MProperty toProberty(Field field)
+    protected MProperty toProperty(Field field)
     {
         String name = field.getName();
         MType type = toMType(field);
