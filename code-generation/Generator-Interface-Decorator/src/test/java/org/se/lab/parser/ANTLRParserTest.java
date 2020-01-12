@@ -15,15 +15,15 @@ import org.se.lab.metamodel.MType;
 public class ANTLRParserTest {
 
 	private MPackage expected;
-	
+
 	@Before
 	public void setup() {
 		expected = new MPackage("org.se.lab.parser");
-		
+
 		MInterface iface = new MInterface("Stack");
-		iface.setPublic(true);		
+		iface.setPublic(true);
 		expected.getInterfaces().add(iface);
-		
+
 		MOperation push = new MOperation("push", new MType("void"));
 		push.getParameters().add(new MParameter("value", new MType("int")));
 		iface.getOperations().add(push);
@@ -32,13 +32,11 @@ public class ANTLRParserTest {
 		iface.getOperations().add(new MOperation("isEmpty", new MType("boolean")));
 		iface.getOperations().add(new MOperation("isFull", new MType("boolean")));
 	}
-	
+
 	@Test
 	public void testParse() throws IOException, RecognitionException {
-		MPackage actual = ANTLRParser.parse("test/org/se/lab/parser/Stack.java");
-		
-		
-		
+		MPackage actual = ANTLRParser.parse("src/test/java/org/se/lab/parser/Stack.java");
+
 		Assert.assertEquals(expected, actual);
 	}
 }

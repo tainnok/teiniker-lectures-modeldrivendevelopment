@@ -14,15 +14,15 @@ import org.se.lab.metamodel.MType;
 public abstract class AbstractVisitorTest {
 
 	private MPackage pkg;
-	
+
 	@Before
 	public void setup() {
 		pkg = new MPackage("org.se.lab.codegenerator");
-		
+
 		MInterface iface = new MInterface("Stack");
-		iface.setPublic(true);		
+		iface.setPublic(true);
 		pkg.getInterfaces().add(iface);
-		
+
 		MOperation push = new MOperation("push", new MType("void"));
 		push.getParameters().add(new MParameter("value", new MType("int")));
 		iface.getOperations().add(push);
@@ -31,13 +31,13 @@ public abstract class AbstractVisitorTest {
 		iface.getOperations().add(new MOperation("isEmpty", new MType("boolean")));
 		iface.getOperations().add(new MOperation("isFull", new MType("boolean")));
 	}
-	
+
 	protected MPackage getPkg() {
 		return this.pkg;
 	}
-	
+
 	protected static String readFile(String file) throws IOException {
-		FileReader fileReader = new FileReader("test/org/se/lab/codegenerator/" + file);
+		FileReader fileReader = new FileReader("src/test/java/org/se/lab/codegenerator/" + file);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		StringBuilder sb = new StringBuilder();
 		String line = null;
@@ -48,5 +48,5 @@ public abstract class AbstractVisitorTest {
 		bufferedReader.close();
 		return sb.toString().trim(); // remove last linebreak
 	}
-	
+
 }
